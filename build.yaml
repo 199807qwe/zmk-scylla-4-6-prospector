@@ -16,6 +16,11 @@ include:
     shield: scylla_left
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_BT_MAX_CONN=1 -DCONFIG_BT_MAX_PAIRED=1
     artifact-name: left_split_dongle_only
+  # Dongle prospector 
+  - board: xiao_ble//zmk
+    shield: scylla_dongle_dongle prospector_adapter
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
 
     # Right Split With Dongle Firmware (Pure Dongle, No Bluetooth Battery)
   - board: nice_nano//zmk
